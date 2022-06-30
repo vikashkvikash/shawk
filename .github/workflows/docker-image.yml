@@ -14,6 +14,7 @@ jobs:
 
     steps:
     - name: Build and push Docker image
+      run: docker build . --file Dockerfile --tag  vikashkvikash/web-app:$(date +%s)
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: vikashkvikash/web-app
